@@ -1,0 +1,25 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Show_all page</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}All Blogs{% endblock %}
+
+{% block content %}
+<h2>All Blogs</h2>
+<ul>
+    {% for b in blogs %}
+        <li>{{ b }}</li>
+    {% endfor %}
+</ul>
+
+<h2>All Images</h2>
+<div>
+    {% for img in images %}
+        <img src="{% static img %}" alt="Image" style="margin:10px; width:400px;">
+    {% endfor %}
+</div>
+{% endblock %}
+

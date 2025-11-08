@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <nav>
+            <a href="{% url 'base' %}">Home</a> |
+            <a href="{% url 'blog' %}">Blog</a> |
+            <a href="{% url 'show_all' %}">Show All</a> |
+            <a href="{% url 'about' %}">About</a>
+        </nav>
+    <meta charset="UTF-8">
+    <title>{% block title %}Base page{% endblock %}</title>
+      <h1>Lovely to study with you.</h1>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h2>The Django we development class is fruitful!</h2>
+       
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Content from child templates will be injected here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer (optional) -->
+    <footer>
+        <p style="text-align:center; margin-top:20px;">&copy; My Recent Blog Work</p>
+    </footer>
+</body>
+</html>

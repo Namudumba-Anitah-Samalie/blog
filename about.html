@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8" />
+  <title>About page</title>
+</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h2>About Me</h2>
+<p><strong>Name:</strong> {{ name }}</p>
+<p><strong>Bio:</strong> {{ bio }}</p>
+{% endblock %}
